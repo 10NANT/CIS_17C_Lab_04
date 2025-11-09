@@ -1,50 +1,50 @@
-# Requirements Document: Stacks System
+# Requirements Document: Binary Tree Inorder Traversal System
 
 ## 1. Introduction
-This system implements a stack data structure using std::vector in C++. It provides LIFO operations for managing elements.
+This system implements binary tree inorder traversal in C++. It provides functions to traverse binary trees in inorder fashion.
 
 ## 2. Functional Requirements
 
-### Stack Component
-- Push elements onto the stack
-- Pop elements from the stack
-- Access the top element
-- Check if stack is empty
-- Get the size of the stack
+### Tree Traversal Component
+- Implement inorderTraversal function that takes a TreeNode* root
+- Return a vector<int> of node values in inorder (left, root, right)
+- Handle null root (return empty vector)
+- Support both recursive and iterative implementations
+
 
 ## 3. Non-Functional Requirements
 
 ### Performance
-- All operations: O(1) amortized
+- Traversal: O(n) time and O(h) space for recursive, O(n) time and O(h) space for iterative
 
 ### Reliability
-- Handle empty stack operations gracefully
-- Proper bounds checking
+- Handle null tree roots gracefully
+- Proper null pointer checks
 
 ### Usability
-- Intuitive interface following standard stack conventions
+- Intuitive interface following standard tree traversal conventions
 
 ## 4. User Stories
-- As a student, I want to push elements onto a stack so that I can implement LIFO behavior.
-- As a developer, I want to pop elements so that I can process items in reverse order.
-- As a programmer, I want to check the top element without removing it.
+- As a student, I want to traverse a binary tree inorder to understand tree algorithms.
+- As a developer, I want to get a vector of node values in inorder sequence.
+- As a programmer, I want to handle both recursive and iterative traversals.
 
 ## 5. Use Cases
 
-### Use Case 1: Stack Operations
-1. Create Stack instance
-2. Push elements
-3. Check top element
-4. Pop elements
-5. Check emptiness
+### Use Case 1: Tree Traversal
+1. Create TreeNode instances
+2. Build a binary tree structure
+3. Call inorderTraversal on root
+4. Receive vector of values in inorder
 
-### Use Case 2: Expression Evaluation
-1. Push operands and operators
-2. Pop for calculations
-3. Maintain order of operations
+
+
+
+
+
 
 ## 6. Testing Requirements
-- The system must pass all provided Google Test cases in `stacks_test.cpp`.
-- Tests cover push, pop, top, and edge cases.
+- The system must pass all provided Google Test cases in `trees_test.cpp`.
+- Tests cover inorder traversal for various tree structures and edge cases.
 - Students should ensure their implementation compiles and runs all tests successfully.
 - Refer to `README.md` for detailed instructions on setting up and running Google Tests.

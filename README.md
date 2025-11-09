@@ -1,33 +1,34 @@
-# Lab 04 - Stacks
+# Lab 04 - Binary Trees
 
-This lab implements the stack data structure using std::vector, demonstrating LIFO (Last In, First Out) behavior.
+This lab implements binary tree inorder traversal and balanced binary tree check, focusing on tree traversal and balance algorithms in C++.
 
 ## Files in this Directory
 - `google_test/`: Directory containing Google Test files
 - Implementation files: `*.cpp` with TODO comments for student completion
 - Documentation: `*.md` files with requirements, diagrams, and presentations
-- `stacks.cpp`: Stack class template with TODO implementations
-- `stacks_test.cpp`: Test suite with 8 comprehensive test cases
-- `design_diagrams.md`: Stack operation visualizations
-- `presentation.md`: Stack concepts and applications
+- `trees.cpp`: Template with TreeNode structure and tree function declarations
+- `trees_test.cpp`: Google Test suite with 20 comprehensive test cases
+- `design_diagrams.md`: Visual representations of binary tree operations
+- `presentation.md`: Lecture notes on binary trees
 - `requirements_document.md`: Detailed specifications
 
 ## Learning Objectives
-- Understand LIFO principle
-- Implement stack using existing data structures
-- Handle stack operations and error conditions
-- Apply stacks to problem-solving
+- Master tree traversal algorithms
+- Implement recursive and iterative tree traversals
+- Understand binary tree structures
+- Practice dynamic memory management for trees
 
-## Stack Operations
-- **push(value)**: Add element to top
-- **pop()**: Remove top element
-- **top()**: Access top element without removal
-- **empty()**: Check if stack is empty
-- **size()**: Get number of elements
+## System Overview
+The system implements two key binary tree algorithms:
+- **TreeNode**: Contains integer data and left/right pointers
+- **inorderTraversal(TreeNode* root)**: Returns vector of node values in inorder (left, root, right)
+- **isBalanced(TreeNode* root)**: Checks if the binary tree is height-balanced
+
+
 
 ## Implementation Instructions
 
-## Testing Your Implementation
+
 
 **Important**: You must build your own test executable in the `google_test/` directory. There are no pre-compiled executables provided - this ensures you learn the compilation process.
 Once you have implemented the TODO methods in the `.cpp` file, follow these steps to test your code:
@@ -102,36 +103,9 @@ Implement the Stack class methods according to the TODO comments:
 - Not updating size properly
 
 ## Extensions
-- Implement stack using linked list
-- Add peek(n) to access nth element
-- Implement min/max stack
-- Create stack-based calculator
+- Implement iterative inorder traversal
+- Add tree height calculation
+- Implement tree serialization
+- Create binary search tree operations
 
-Master stacks as a foundation for more complex data structures!
-## Testing Your Implementation
-
-**Important**: You must build your own test executable in the `google_test/` directory. There are no pre-compiled executables provided - this ensures you learn the compilation process.
-Once you have implemented the TODO methods, follow these steps to test your code:
-
-### Step 1: Navigate to the google_test directory
-```bash
-cd google_test
-```
-
-### Step 2: Compile the test executable
-```bash
-g++ *_test.cpp -std=c++17 -I/opt/homebrew/include -L/opt/homebrew/lib -lgtest -lgtest_main -lpthread -o test_executable
-```
-
-### Step 3: Run the tests
-```bash
-./test_executable
-```
-
-### Expected Output
-You should see tests passing if your implementation is correct.
-
-### Troubleshooting
-- **Compilation errors**: Ensure all TODO methods are implemented.
-- **Test failures**: Debug based on error messages.
-- **Dependencies**: Verify Google Test installation.
+Master tree algorithms as a foundation for more complex data structures!
